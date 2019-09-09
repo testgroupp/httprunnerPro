@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea997175-8807-4414-a78f-b47156344fad" name="Default Changelist" comment="" />
+    <list default="true" id="ea997175-8807-4414-a78f-b47156344fad" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/api/getDayReportByQueryName.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/history_orders.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/history_orders_ag_hunter.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/history_orders_bbin.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/history_orders_lhc.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/history_orders_ly.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/history_orders_pt.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/history_orders_sb.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/lottery_trace.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/queryBetData.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcases/getDayReportByQueryName.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcases/history_orders.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcases/history_orders_ag_hunter.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcases/history_orders_bbin.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcases/history_orders_lhc.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcases/history_orders_ly.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcases/history_orders_pt.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcases/history_orders_sb.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcases/lottery_trace.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcases/queryBetData.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,19 +39,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/api/transferListWeb.yml">
+        <entry file="file://$PROJECT_DIR$/api/getDayReportByQueryName.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+            <state relative-caret-position="361">
+              <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/testcases/transferListWeb.yml">
+        <entry file="file://$PROJECT_DIR$/testcases/getDayReportByQueryName.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+            <state relative-caret-position="247">
+              <caret line="13" column="14" lean-forward="true" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -72,30 +95,12 @@
       <replace>{skip_case(smoke,</replace>
     </replaceStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/api/getRecentLottery.yml" />
-        <option value="$PROJECT_DIR$/testcases/getRecentLottery.yml" />
-        <option value="$PROJECT_DIR$/testcases/deps/get_order_detail.yml" />
-        <option value="$PROJECT_DIR$/api/recent_detail.yml" />
-        <option value="$PROJECT_DIR$/testcases/recent_detail.yml" />
-        <option value="$PROJECT_DIR$/api/addbankcard.yml" />
-        <option value="$PROJECT_DIR$/api/authResult.yml" />
-        <option value="$PROJECT_DIR$/api/addResult.yml" />
-        <option value="$PROJECT_DIR$/api/queryResult.yml" />
-        <option value="$PROJECT_DIR$/testcases/get_queryResult.yml" />
-        <option value="$PROJECT_DIR$/tt.py" />
-        <option value="$PROJECT_DIR$/testcases/addBankCard.yml" />
-        <option value="$PROJECT_DIR$/api/validatePayPassword.yml" />
-        <option value="$PROJECT_DIR$/testcases/validatePayPassword.yml" />
-        <option value="$PROJECT_DIR$/api/updatePayPassword.yml" />
-        <option value="$PROJECT_DIR$/testcases/updatePayPassword.yml" />
-        <option value="$PROJECT_DIR$/testcases/ht/login.yml" />
-        <option value="$PROJECT_DIR$/api/ht/lotteryLogin.yml" />
-        <option value="$PROJECT_DIR$/api/ht/login.yml" />
-        <option value="$PROJECT_DIR$/testcases/ht/lotteryLogin.yml" />
-        <option value="$PROJECT_DIR$/api/ht/addWhiteList.yml" />
         <option value="$PROJECT_DIR$/api/updatePassword.yml" />
         <option value="$PROJECT_DIR$/testcases/register.yml" />
         <option value="$PROJECT_DIR$/testcases/updatePassword.yml" />
@@ -126,36 +131,66 @@
         <option value="$PROJECT_DIR$/api/transferListWeb.yml" />
         <option value="$PROJECT_DIR$/testcases/transferListWeb.yml" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/api/history_orders.yml" />
+        <option value="$PROJECT_DIR$/testcases/history_orders.yml" />
+        <option value="$PROJECT_DIR$/api/lottery_trace.yml" />
+        <option value="$PROJECT_DIR$/testcases/lottery_trace.yml" />
+        <option value="$PROJECT_DIR$/api/queryBetData.yml" />
+        <option value="$PROJECT_DIR$/testcases/queryBetData.yml" />
+        <option value="$PROJECT_DIR$/testcases/history_orders_ag_hunter.yml" />
+        <option value="$PROJECT_DIR$/api/history_orders_ag_hunter.yml" />
+        <option value="$PROJECT_DIR$/testcases/history_orders_pt.yml" />
+        <option value="$PROJECT_DIR$/api/history_orders_pt.yml" />
+        <option value="$PROJECT_DIR$/api/history_orders_bbin.yml" />
+        <option value="$PROJECT_DIR$/testcases/history_orders_bbin.yml" />
+        <option value="$PROJECT_DIR$/testcases/history_orders_sb.yml" />
+        <option value="$PROJECT_DIR$/api/history_orders_sb.yml" />
+        <option value="$PROJECT_DIR$/api/history_orders_ly.yml" />
+        <option value="$PROJECT_DIR$/testcases/history_orders_ly.yml" />
+        <option value="$PROJECT_DIR$/testcases/history_orders_lhc.yml" />
+        <option value="$PROJECT_DIR$/api/history_orders_lhc.yml" />
+        <option value="$PROJECT_DIR$/testcases/getDayReportByQueryName.yml" />
+        <option value="$PROJECT_DIR$/run.py" />
+        <option value="$PROJECT_DIR$/api/getDayReportByQueryName.yml" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="16" />
-    <option name="y" value="89" />
-    <option name="width" value="1350" />
+    <option name="x" value="36" />
+    <option name="y" value="83" />
+    <option name="width" value="1161" />
     <option name="height" value="916" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="httpRunnerPro" type="b2602c69:ProjectViewProjectNode" />
-              <item name="httpRunnerPro" type="462c0819:PsiDirectoryNode" />
+              <item name="httprunnerPro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="httprunnerPro" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="httpRunnerPro" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="httprunnerPro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="httprunnerPro" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="httprunnerPro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="httprunnerPro" type="462c0819:PsiDirectoryNode" />
+              <item name="testcases" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -331,9 +366,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="16" y="89" width="1350" height="916" extended-state="0" />
+    <frame x="36" y="83" width="1028" height="916" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2195122" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29090908" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -347,7 +383,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.42911878" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.27493605" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.36132315" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -383,208 +419,54 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/api/recent_order.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/log_in.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="38" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/get_issue.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testcases/ht/login.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/add_order_now.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="17" lean-forward="true" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/ht/lotteryLogin.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testcases/ht/lotteryLogin.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/ht/login.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testcases/login.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/create_link.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="7" selection-start-line="3" selection-start-column="2" selection-end-line="6" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/updatePassword.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testcases/updatePassword.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="23" column="29" lean-forward="true" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testcases/register.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="18" column="55" lean-forward="true" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/register.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="17" lean-forward="true" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/setPayPassword.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testcases/setPayPassword.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/userInfoAjax.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testcases/userInfoAjax.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="12" lean-forward="true" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/recharge.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testcases/deps/get_channelCode_and_recharge.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="26" column="41" lean-forward="true" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testcases/recharge.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testcases/updatePayPassword.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/login.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="95">
           <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/smoke_mj.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/smoke_mj.csv">
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="19">
           <caret line="1" column="61" selection-start-line="1" selection-start-column="61" selection-end-line="1" selection-end-column="61" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/smoke_md.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/smoke_md.csv">
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="19">
           <caret line="1" column="43" lean-forward="true" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/smoke_mc.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/smoke_mc.csv">
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="19">
           <caret line="1" column="59" selection-start-line="1" selection-start-column="59" selection-end-line="1" selection-end-column="59" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/smoke.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/smoke.csv">
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="57">
           <caret line="3" column="44" lean-forward="true" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
         </state>
-      </provider>
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/testsuites/smoke_mj.yml">
@@ -671,41 +553,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/debugtalk.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="142" lean-forward="true" selection-start-line="142" selection-end-line="142" />
-          <folding>
-            <element signature="e#191#416#0" />
-            <element signature="e#445#587#0" />
-            <element signature="e#614#731#0" />
-            <element signature="e#759#877#0" />
-            <element signature="e#880#910#0" />
-            <element signature="e#1094#1448#0" />
-            <element signature="e#1483#1635#0" />
-            <element signature="e#1674#1862#0" />
-            <element signature="e#1908#2276#0" />
-            <element signature="e#2306#2431#0" />
-            <element signature="e#2460#2616#0" />
-            <element signature="e#2583#2668#0" />
-            <element signature="e#2444#2582#0" />
-            <element signature="e#2644#3734#0" />
-            <element signature="e#3796#5012#0" />
-            <element signature="e#5078#6096#0" />
-            <element signature="e#6195#6947#0" />
-            <element signature="e#7040#7774#0" />
-            <element signature="e#7040#7182#1" />
-            <element signature="e#7818#8476#0" />
-            <element signature="e#8513#8642#0" />
-            <element signature="e#8689#8977#0" />
-            <element signature="e#9010#9188#0" />
-            <element signature="e#9240#9452#0" />
-            <element signature="e#9477#9550#0" />
-            <element signature="e#9610#10204#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/queryResultWeb.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -755,13 +602,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testcases/transferListWeb.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -769,13 +609,192 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tt.py">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/tt.py" />
+    <entry file="file://$PROJECT_DIR$/testcases/transferListWeb.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/transferListWeb.yml">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcases/history_orders.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/lottery_trace.yml">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+          <caret line="17" column="30" selection-end-line="17" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcases/lottery_trace.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="30" lean-forward="true" selection-end-line="18" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/queryBetData.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="18" lean-forward="true" selection-end-line="20" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcases/queryBetData.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" lean-forward="true" selection-end-line="18" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/history_orders_ag_hunter.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="17" column="30" lean-forward="true" selection-end-line="17" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcases/history_orders_ag_hunter.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="12" column="7" lean-forward="true" selection-end-line="18" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/history_orders_pt.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="16" column="30" lean-forward="true" selection-end-line="16" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcases/history_orders_pt.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="13" lean-forward="true" selection-end-line="18" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/history_orders_bbin.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="12" column="42" lean-forward="true" selection-end-line="18" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcases/history_orders_bbin.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="12" column="7" lean-forward="true" selection-end-line="18" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/history_orders_sb.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="22" lean-forward="true" selection-end-line="19" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcases/history_orders_sb.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="18" column="23" lean-forward="true" selection-end-line="18" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/history_orders.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/history_orders_ly.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="11" column="18" lean-forward="true" selection-end-line="19" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcases/history_orders_ly.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="14" column="34" lean-forward="true" selection-end-line="18" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/history_orders_lhc.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="30" lean-forward="true" selection-end-line="17" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcases/history_orders_lhc.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="18" column="23" lean-forward="true" selection-end-line="18" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/debugtalk.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="124" column="19" selection-start-line="124" selection-start-column="4" selection-end-line="124" selection-end-column="19" />
+          <folding>
+            <element signature="e#191#416#0" />
+            <element signature="e#445#587#0" />
+            <element signature="e#614#731#0" />
+            <element signature="e#759#877#0" />
+            <element signature="e#880#910#0" />
+            <element signature="e#1094#1448#0" />
+            <element signature="e#1483#1635#0" />
+            <element signature="e#1674#1862#0" />
+            <element signature="e#1908#2276#0" />
+            <element signature="e#2306#2431#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcases/getDayReportByQueryName.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="14" lean-forward="true" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/getDayReportByQueryName.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
         </state>
       </provider>
     </entry>

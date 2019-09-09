@@ -1,0 +1,20 @@
+name: 盈亏统计
+request:
+    url: /lottery/api/u/v1/agent/getDayReportByQueryName
+    headers:
+        User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+    method: GET
+    params:
+      orderStartTime: ${get_query_start_time()}
+      orderEndTime: ${get_query_end_time()}
+      currPage: 1
+      pageSize: 20
+      startTime: ${get_report_time()}
+      endTime: ${get_report_time()}
+      queryType: 2
+      queryName: CP
+      _: 1568008377366
+
+validate:
+    - eq: ["status_code", 200]

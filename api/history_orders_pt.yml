@@ -1,0 +1,17 @@
+name: PT老虎机游戏记录
+request:
+    url: /lottery/api/u/v1/lottery/history_orders_pt
+    headers:
+        User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+    method: GET
+    params:
+      orderStartTime: ${get_query_start_time()}
+      orderEndTime: ${get_query_end_time()}
+      currPage: 1
+      pageSize: 20
+      gameType: ''
+      _: 1568008377269
+
+validate:
+    - eq: ["status_code", 200]

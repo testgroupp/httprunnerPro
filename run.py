@@ -17,9 +17,9 @@ class MyThread(threading.Thread):
 if __name__ == '__main__':
     suites = ["testsuites/smoke_mc.yml", "testsuites/smoke_md.yml", "testsuites/smoke_mj.yml"]
 
-    threads = []
+    # threads = []
     for suite in suites:
         thread = MyThread(suite)
         thread.start()
         time.sleep(3)
-        threads.append(thread)
+        # threads.append(thread)
