@@ -1,0 +1,12 @@
+- config:
+    name: 删除推广链接
+    base_url: $base_url
+    variables:
+      base_url: http://www.mochen111.net
+      username: m1102
+      password: abc123
+
+
+- test:
+    name: 删除推广链接
+    testcase: testcases/deps/get_linkId_then_delete.yml

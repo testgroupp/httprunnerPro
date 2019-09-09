@@ -1,0 +1,31 @@
+- config:
+    name: 删除推广链接
+
+- test:
+    name: 登录
+    api: api/log_in.yml
+
+- test:
+    name: 获取返点
+    api: api/get_point.yml
+    extract:
+      point: content.result.point
+
+- test:
+    name: 生成推广链接
+    api: api/create_link.yml
+
+- test:
+    name: 获取linkId
+    api: api/get_link.yml
+    extract:
+      linkId: content.result.list.0.linkId
+
+- test:
+    name: 删除推广链接
+    api: api/delete_link.yml
+    extract:
+      msg: content.msg
+    validate:
+      - eq: [$msg,'ok']
+
