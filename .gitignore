@@ -1,5 +1,5 @@
 .env
 reports/
 tt.py
-.idea/
+.idea
 __pycache__/
