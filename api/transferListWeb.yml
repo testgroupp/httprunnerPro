@@ -1,0 +1,19 @@
+name: 钱包转账记录
+request:
+    url: /sobet/order/ajaxListWeb
+    headers:
+        User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+    method: GET
+    params:
+      startDate: ${get_query_start_time()}
+      endDate: ${get_query_end_time()}
+      page: 1
+      pageSize: 10
+      turnOut: ''
+      turnIn: ''
+      queryType: ''
+      _: 1568008376914
+
+validate:
+    - eq: ["status_code", 200]

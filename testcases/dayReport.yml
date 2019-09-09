@@ -1,0 +1,14 @@
+- config:
+    name: 日报表
+    base_url: $base_url
+    variables:
+      lotteryCode: 'TXFFC'
+      order: '[{"method":"em_zx_hfs","code":"4|5","nums":"1","piece":"1","price":"0.002","odds":"191.4","point":"0","amount":"0.002"}]'
+      base_url: http://www.mochen111.com
+      username: demong010
+      password: demong010
+
+
+- test:
+    name: 日报表
+    testcase: testcases/deps/check_dayReport.yml

@@ -1,0 +1,11 @@
+name: 获取追号订单状态，检查点  # result.issues.1.status -> 1
+request:
+  url: /lottery/api/u/v1/lottery/trace
+  headers:
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+  method: GET
+  params:
+    traceId: $traceId
+
+validate:
+   - eq: [status_code,200]

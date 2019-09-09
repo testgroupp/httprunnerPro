@@ -1,0 +1,21 @@
+- config:
+    name: 获取banner
+    base_url: $base_url
+    variables:
+      base_url: http://www.mcpoker.net
+    export:
+      - code
+      - msg
+      - imgPath
+
+- test:
+    name: 获取banner
+    api: api/getBanners.yml
+    extract:
+      code: content.code
+      msg: content.msg
+      imgPath: content.result.0.imgPath
+
+    validate:
+      - eq: [$code, 1]
+      - eq: [$msg, ok]

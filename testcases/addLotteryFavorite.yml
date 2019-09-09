@@ -1,0 +1,21 @@
+- config:
+    name: 添加常玩游戏
+    base_url: $base_url
+    variables:
+        base_url: http://www.mochen111.net
+        lotteryCode: XN5FC
+        username: m1102
+        password: abc123
+    export:
+        - lotteryCode
+
+- test:
+    name: 登录
+    api: api/log_in.yml
+    variables:
+      expect: True
+    extract:
+      uid: content.user.uin
+      cookies: cookies
+    validate:
+      - eq: [$expect,"${add_favorite($base_url,$lotteryCode,$uid,$cookies)}"]

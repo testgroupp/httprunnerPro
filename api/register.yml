@@ -1,0 +1,15 @@
+name: 注册
+request:
+   url: /lottery/api/u/v1/agent/agent_register
+   headers:
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+        (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+   method: POST
+   data:
+      userName: $r_uname
+      password: ${to_md5($r_psw)}
+      desPassword: 8974CFF81FA916BB1BD2AA732FF9477B
+      point: ${to_point($point)}
+      appId: 2
+      userType: 1
+      action: POST

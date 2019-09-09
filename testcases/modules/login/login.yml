@@ -1,0 +1,21 @@
+- config:
+    name: 登录
+    base_url: $base_url
+    variables:
+        username: m1102
+        password: abc123
+        base_url: http://www.mochen111.net
+    export:
+      - code
+      - msg
+
+
+- test:
+    name: 登录
+    api: api/log_in.yml
+    extract:
+      - msg: content.msg
+      - code: content.code
+    validate:
+      - eq: [status_code, 200]
+      - eq: ["${to_string($code)}", $ecode]

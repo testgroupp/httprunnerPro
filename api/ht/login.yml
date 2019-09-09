@@ -1,0 +1,11 @@
+name: 后台主页登录
+request:
+  url: /admin/pages/PreAdminUser/login.do
+  headers:
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+  method: POST
+  data:
+    name: $username
+    pwd: Li/uUFeGhQV6sJncTG7OhQ==
+validate:
+    - eq: [status_code,200]

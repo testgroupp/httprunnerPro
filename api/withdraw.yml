@@ -1,0 +1,18 @@
+name: 提现
+request:
+  url: /sobet/pay/withdrawCashAjax
+  headers:
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+  method: POST
+  data:
+    operation: add
+    cardNo: $cardNo
+    user_bank_id: $user_bank_id
+    pay_password: ${to_md5($pay_password)}
+    withdrawMoney: 501.68
+    bindTime: 2019-02-08 14:38:56.0
+
+
+validate:
+  - eq: [status_code, 200]
+

@@ -1,0 +1,21 @@
+- config:
+      base_url: $base_url
+      name: 下单
+      variables:
+          lotteryCode: 'DCTXSSM'
+          order: '[{"method":"em_zx_hfs","code":"4|5","nums":"1","piece":"1","price":"0.002","odds":"191.4","point":"0","amount":"0.002"}]'
+          base_url: http://www.mochen111.net
+          username: m1102
+          password: abc123
+
+
+- test:
+    name: 登录
+    skipIf: ${skip_case(smoke,add_order)}
+    api: api/log_in.yml
+
+
+- test:
+    name: 下单
+    testcase: testcases/deps/getIssue_and_addOrder.yml
+

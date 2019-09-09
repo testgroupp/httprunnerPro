@@ -1,0 +1,36 @@
+- config:
+    name: 获取订单号并撤单
+    export:
+        - lotteryCode
+        - issue
+        - order
+        - order_statu
+        - orderId
+        - cancel_info
+
+- test:
+    name: 获取奖期
+    skipIf: ${skip_case(smoke, cancel_order)}
+    api: api/get_issue_for_cancel_order.yml
+    extract:
+        issue: content.result.issue
+
+
+- test:
+    name: 下单
+    api: api/add_order.yml
+    extract:
+        order_statu: content.result.orders.0.msg
+        orderId: content.result.orders.0.orderItemId
+
+- test:
+    name: 撤单
+    api: api/cancel_order.yml
+
+    extract:
+        cancel_info: content.msg
+    validate:
+        - eq: ["status_code", 200]
+        - eq: ["content.code", "0"]
+        - eq: [$cancel_info, "撤单成功"]
+

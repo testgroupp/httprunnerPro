@@ -1,0 +1,23 @@
+- config:
+    name: 获取常玩彩种
+    base_url: $base_url
+    variables:
+      base_url: http://www.mcpoker.net
+      username: delf002
+      password: abc123
+    export:
+      - msg
+
+- test:
+    name: 登录
+    api: api/log_in.yml
+
+- test:
+    name: 获取常玩彩种
+    api: api/getLotteryFavorite.yml
+    extract:
+      code: content.code
+      msg: content.msg
+    validate:
+      - eq: [$code,1]
+      - eq: [$msg, ok]

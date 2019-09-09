@@ -1,0 +1,25 @@
+- config:
+    name: 添加银行卡
+    base_url: $base_url
+    variables:
+      base_url: http://www.mochen111.net
+      username: m1102
+      password: abc123
+    export:
+        - username
+        - msg
+
+- test:
+    name: 登录
+    api: api/log_in.yml
+
+
+- test:
+    name: 添加银行卡
+    api: api/addResult.yml
+    variables:
+      expect_msg: ["1", "最多只能绑定5张银行卡！"]
+    extract:
+      msg: content.message
+    validate:
+      - contains: [$expect_msg,$msg]

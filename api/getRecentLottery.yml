@@ -1,0 +1,8 @@
+name: getRecentLottery
+request:
+  url: /lottery/api/u/v1/lottery/getRecentLottery?_=1567496479695
+  headers:
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+  method: GET
+
+

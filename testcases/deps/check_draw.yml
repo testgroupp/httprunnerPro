@@ -1,0 +1,54 @@
+- config:
+    name: 检查开奖
+    export:
+      - username
+      - msg_login
+      - add_statu
+      - mode
+      - odds
+      - statu
+
+
+- test:
+    name: 登录
+    skipIf: ${skip_case(smoke, draw)}
+    api: api/log_in.yml
+    extract:
+        - cookies: cookies
+        - msg_login: content.msg
+    validate:
+      - eq: [$msg_login,"登录成功"]
+
+- test:
+    name: 获取奖期
+    api: api/get_issue.yml
+    extract:
+        issue: content.result.issue
+
+- test:
+    name: 下单
+    api: api/add_order.yml
+    extract:
+        add_statu: content.result.orders.0.msg
+        bet_money: content.result.orders.0.money
+    validate:
+        - eq: [$add_statu, "成功"]
+
+- test:
+    name: 获取剩余投注时间
+    api: api/times.yml
+    extract:
+      times: content.result.time
+
+
+- test:
+    name: 获取订单状态
+    api: api/recent_order.yml
+    variables:
+      draw_statu: ${get_draw_statu($base_url,$times,$lotteryCode,$cookies)}  # 等待开奖
+    extract:
+      mode: content.result.0.mode
+      odds: content.result.0.odds
+      statu: content.result.0.status
+    validate:
+      - eq: [$statu,"${get_expect_draw_status($mode,$odds)}"]

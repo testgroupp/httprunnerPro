@@ -1,0 +1,18 @@
+- config:
+    name: 获取客服链接
+    base_url: $base_url
+    variables:
+      base_url: http://www.mcpoker.net
+    export:
+      - code
+      - url
+
+- test:
+    name: 获取客服链接
+    api: api/getLive800Url.yml
+    extract:
+      code: content.code
+      url: content.url
+
+    validate:
+      - eq: [$code,0]

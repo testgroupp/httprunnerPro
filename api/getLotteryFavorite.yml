@@ -1,0 +1,10 @@
+name: 获取常玩彩种
+request:
+  url: /lottery/api/u/v1/lottery/getLotteryFavorite
+  headers:
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+  method: GET
+  params:
+    _: 1567477443750
+vaildate:
+  - eq: [status_code,200]
