@@ -1,0 +1,24 @@
+- config:
+    name: 获取用户信息
+    base_url: $base_url
+    variables:
+      base_url: http://www.mochen111.net
+      username: m1101
+      password: abc123
+
+    export:
+      - username
+      - uname
+
+- test:
+    name: 登录
+    api: api/log_in.yml
+
+- test:
+    name: 获取用户信息
+    api: api/userInfoAjax.yml
+    extract:
+      uname: content.userInfo.cn
+
+    validate:
+      - eq: [$uname, $username]

@@ -1,0 +1,25 @@
+- config:
+    name: 奖金组
+    base_url: $base_url
+    variables:
+      base_url: http://www.mochen111.net
+      lotteryCode: CQSSC
+      username: m1102
+      password: abc123
+    export:
+      - username
+      - msg
+
+- test:
+    name: 登录
+    api: api/log_in.yml
+
+- test:
+    name: 奖金组
+    api: api/odds.yml
+    extract:
+      msg: content.msg
+      code: content.code
+    validate:
+      - eq: [$msg,ok]
+      - eq: [$code,1]

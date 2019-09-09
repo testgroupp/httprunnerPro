@@ -1,0 +1,18 @@
+name: 登录
+request:
+    url: /sso/login
+    headers:
+        User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+    method: GET
+    params:
+        _: '1564730816536'
+        appId: '5'
+        cn: $username
+        from: portal
+        password: ${to_md5($password)}
+        way: pwd
+
+
+validate:
+    - eq: ["status_code", 200]

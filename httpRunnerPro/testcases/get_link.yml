@@ -1,0 +1,25 @@
+- config:
+    name: 获取推广链接信息
+    base_url: $base_url
+    variables:
+      base_url: http://www.mochen111.net
+      username: m1102
+      password: abc123
+    export:
+      - code
+      - msg
+
+- test:
+    name: 登录
+    api: api/log_in.yml
+
+- test:
+    name: 获取推广链接信息
+    api: api/get_link.yml
+    extract:
+      code: content.code
+      msg: content.msg
+
+    validate:
+      - eq: [$code,1]
+      - eq: [$msg, ok]

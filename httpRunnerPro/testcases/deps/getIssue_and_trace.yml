@@ -1,0 +1,57 @@
+- config:
+    name: 获取期数并追号
+    export:
+      - lotteryCode
+      - issue
+      - order
+      - order_statu
+      - traceId
+      - msg_trace
+      - trace_statues
+
+
+- test:
+    name: 获取奖期
+    skipIf: ${skip_case(smoke, trace)}
+    api: api/get_issue.yml
+    extract:
+        issue: content.result.issue
+
+- test:
+    name: 追号下单
+    api: api/trace.yml
+    extract:
+        order_statu: content.result.orders.0.msg
+    validate:
+        - eq: [$order_statu, "成功"]
+
+- test:
+    name: 获取追号id
+    api: api/recent_order.yml
+    extract:
+      - traceId: content.result.0.traceId
+    validate:
+      - eq: [content.msg,"ok"]
+
+- test:
+    name: 获取剩余投注时间
+    api: api/times.yml
+    extract:
+      times: text.result.time
+      msg_trace: text.msg
+    validate:
+      - eq: [$msg_trace,"ok"]
+
+
+
+- test:
+     name: 检查点 追号状态
+     api: api/get_trace_status.yml
+     variables:
+       wait_trace: ${wait_to_trace($times,$lotteryCode)}  # 等待追号
+       expect_statu: [1,2]  # 1:完成  2:追中即停，取消  0:进行中
+     extract:
+       trace_statues: content.result.issues.1.status
+     validate:
+       - eq: [content.msg,"ok"]
+       - contains: [$expect_statu,$trace_statues]

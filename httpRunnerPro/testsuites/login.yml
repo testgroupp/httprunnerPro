@@ -1,0 +1,10 @@
+config:
+  name: 登陆
+  variables:
+    data: ${P(data/login.csv)}
+
+testcases:
+    $platform：登录：$des:
+       testcase: testcases/modules/login/login.yml
+       parameters:
+          base_url-username-password-platform-ecode-des: $data

@@ -1,0 +1,16 @@
+- config:
+    name: 开奖
+    base_url: $base_url
+    variables:
+      base_url: http://www.mochen111.net
+      lotteryCode: TXFFC
+      order: '[{"method":"em_zx_hfs","code":"0,1,2,3,4,5,6,7,8,9|0,1,2,3,4,5,6,7,8,9","nums":"100","amount":"0.2","piece":"1","price":"0.002","odds":"198","point":"0"}]'
+      username: m1102
+      password: abc123
+
+- test:
+    name: 开奖
+    testcase: testcases/deps/check_draw.yml
+
+
+

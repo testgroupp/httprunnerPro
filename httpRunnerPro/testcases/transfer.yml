@@ -1,0 +1,34 @@
+- config:
+    name: 钱包转账
+    base_url: $base_url
+    variables:
+      base_url: http://www.mod168.space
+      pay_password: mc123456
+      username: mdceshi01
+      password: md123456
+      platform: 摩登正式
+    output:
+      - platform
+      - username
+      - transfer_result
+
+
+- test:
+    name: 登录
+    skipIf: ${skip_case(smoke, transfer)}
+    api: api/log_in.yml
+
+
+- test:
+    name: 转账
+    skipIf: ${skip_case(smoke, transfer)}
+    api: api/transfer.yml
+    variables:
+      t_msg: ${get_transfer_msg($platform)}
+    extract:
+      - transfer_result: content.msg
+    validate:
+      - contains: [$t_msg,$transfer_result]
+
+
+

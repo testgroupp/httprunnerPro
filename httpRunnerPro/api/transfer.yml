@@ -1,0 +1,16 @@
+name: 钱包转账
+request:
+  url: /sobet/pay/cbPointTransfer
+  headers:
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+  method: POST
+  data:
+#    turnOutCn: 彩票钱包
+#    turnInCn: AG钱包
+    turnOut: sobet_01
+    turnIn: ag_01
+    cash: 20
+    payPassword: ${to_md5($pay_password)}
+
+validate:
+  - eq: [status_code,200]

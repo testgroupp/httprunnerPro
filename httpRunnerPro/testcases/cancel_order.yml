@@ -1,0 +1,26 @@
+- config:
+    name: 取消订单
+    base_url: $base_url
+    variables:
+        lotteryCode: 'TXFFC'
+        order: '[{"method":"em_zx_hfs","code":"4|5","nums":"1","piece":"1","price":"0.002","odds":"191.4","point":"0","amount":"0.002"}]'
+        base_url: "http://www.mochen111.net"
+        username: m1102
+        password: abc123
+
+
+- test:
+    name: 登录
+    skipIf: ${skip_case(smoke, cancel_order)}
+    api: api/log_in.yml
+    validate:
+        - eq: ["status_code", 200]
+        - eq: ["content.msg", "登录成功"]
+
+- test:
+    name: 取消订单
+    testcase: testcases/deps/order_and_cancelOrder.yml
+
+
+
+

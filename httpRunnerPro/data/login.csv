@@ -1,0 +1,5 @@
+platform,des,base_url,username,password,ecode
+摩臣TK,成功,http://www.mochen111.net,m1102,abc123,0
+摩臣TK,用户名为空,http://www.mochen111.net,,abc123,-3
+摩臣TK,用户名错误,http://www.mochen111.net,m110222222,abc123,-3
+摩臣TK,密码错误,http://www.mochen111.net,m1102,abc12,2

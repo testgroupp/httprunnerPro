@@ -1,0 +1,20 @@
+- config:
+    name: 添加海外白名单
+    base_url: $base_url
+    variables:
+      base_url: http://admin.mochen111.net
+      username: delf01
+      w_username: de657424406347
+    export:
+      - suce
+
+- test:
+    name: 添加海外白名单
+    api: api/ht/addWhiteList.yml
+    variables:
+      headers: ${login_admin($base_url,$username)}
+      expect_result: ["用户名已存在","添加成功"]
+    extract:
+      suce: content.errorMsg
+    validate:
+      - contained_by: [$suce,$expect_result]

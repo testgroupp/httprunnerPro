@@ -1,0 +1,25 @@
+- config:
+    name: 获取自身返点，生成推广链接
+    export:
+      - create_resutl
+      - point
+
+
+- test:
+    name: 获取返点
+    skipIf: ${skip_case(smoke, create_link)}
+    api: api/get_point.yml
+    extract:
+      point: content.result.point
+    validate:
+      - eq: [content.msg, "ok"]
+
+- test:
+    name: 生成推广链接
+    api: api/create_link.yml
+#    skipIf: ${skip_case(smoke, create_link)}
+    extract:
+      create_resutl: content.msg
+    validate:
+      - eq: [$create_resutl, "ok"]
+      - eq: ["content.result", true]
