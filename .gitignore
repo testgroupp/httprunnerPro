@@ -2,3 +2,4 @@
 reports/
 tt.py
 .idea
+__pycache__/
