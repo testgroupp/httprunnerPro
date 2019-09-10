@@ -1,0 +1,13 @@
+name: 获取游戏返点
+request:
+    url: /lottery/api/u/v1/agent/getLotteryPoint
+    headers:
+        User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+    method: GET
+    params:
+      point: $point
+      _: 1568101113302
+
+validate:
+    - eq: ["status_code", 200]

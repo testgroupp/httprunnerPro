@@ -1,0 +1,11 @@
+- config:
+    name: 获取下级返点详情
+    base_url: $base_url
+    variables:
+      base_url: http://www.mochen111.net
+      username: m1102
+      password: abc123
+
+- test:
+    name: 获取下级返点详情
+    testcase: testcases/deps/get_uid_and_pointDetail.yml

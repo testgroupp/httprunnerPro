@@ -380,10 +380,10 @@ def skip_case(skip, case):
     """
     s = skips.__getattribute__(skip)
     r = str(s[case]).lower()
-    if r != "true":
-        return False
-    else:
+    if r == "off":
         return True
+    else:
+        return False
 
 
 def to_string(s):

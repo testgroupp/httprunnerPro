@@ -1,0 +1,11 @@
+- config:
+    name: 获取游戏返点
+    base_url: $base_url
+    variables:
+      base_url: http://www.mochen111.net
+      username: m1102
+      password: abc123
+
+- test:
+    name: 获取采种返点
+    testcase: testcases/deps/get_point_and_lotterPoint.yml

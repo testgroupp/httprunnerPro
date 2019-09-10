@@ -1,0 +1,20 @@
+- config:
+    name: 获取下级返点详情
+
+- test:
+    name: login
+    api: api/log_in.yml
+
+- test:
+    name: 下级信息
+    api: api/users.yml
+    extract:
+      userId: content.result.users.0.userId
+
+- test:
+    name: 获取下级返点详情
+    api: api/user_info.yml
+    extract:
+      msg: content.msg
+    validate:
+      - eq: [$msg,'ok']

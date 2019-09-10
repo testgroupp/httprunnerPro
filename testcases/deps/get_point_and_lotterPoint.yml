@@ -1,0 +1,22 @@
+- config:
+    name: 获取游戏返点
+
+- test:
+    name: login
+    api: api/log_in.yml
+
+- test:
+    name: 下级信息
+    api: api/users.yml
+    extract:
+      point: content.result.point
+
+- test:
+    name: 获取游戏返点
+    api: api/getLotteryPoint.yml
+    extract:
+      - msg: content.msg
+    validate:
+      - eq: [$msg, 'ok']
+
+
