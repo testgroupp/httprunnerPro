@@ -1,0 +1,19 @@
+- config:
+    name: PT游戏日报表
+    base_url: $base_url
+    variables:
+      base_url: http://www.mochen111.net
+      username: m1102
+      password: abc123
+
+- test:
+    name: login
+    api: api/log_in.yml
+
+- test:
+    name: PT游戏日报表
+    api: api/getDayReportPT.yml
+    extract:
+      msg: content.msg
+    validate:
+      - eq: [$msg,'ok']

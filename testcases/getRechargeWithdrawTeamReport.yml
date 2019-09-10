@@ -1,0 +1,19 @@
+- config:
+    name: 团队充提报表
+    base_url: $base_url
+    variables:
+      base_url: http://www.mochen111.net
+      username: m1102
+      password: abc123
+
+- test:
+    name: login
+    api: api/log_in.yml
+
+- test:
+    name: 团队充提报表
+    api: api/getRechargeWithdrawTeamReport.yml
+    extract:
+      msg: content.msg
+    validate:
+      - eq: [$msg,'ok']
