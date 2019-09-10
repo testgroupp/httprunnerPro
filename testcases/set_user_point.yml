@@ -1,0 +1,11 @@
+- config:
+    name: 调整下级返点
+    base_url: $base_url
+    variables:
+      base_url: http://www.mochen111.net
+      username: m1102
+      password: abc123
+
+- test:
+    name: 调整下级返点
+    testcase: testcases/deps/.yml
