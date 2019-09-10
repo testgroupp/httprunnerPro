@@ -5,7 +5,7 @@
        ON -->  执行
        OFF --> 跳过"""
 
-1
+
 class Skips(object):
     # 冒烟
     smoke = {"login": "OFF",  # 登陆
