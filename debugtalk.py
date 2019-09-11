@@ -32,12 +32,13 @@ def to_md5(password):
     return h.hexdigest()
 
 
-def pro_username():
+def pro_username(start_with='de'):
     """
     生成随机用户名
+    :param start_with:
     :return:
     """
-    username = "de" + str(random.randint(100, 999999999999))
+    username = start_with + str(random.randint(100, 999999999999))
     return username
 
 
@@ -422,3 +423,38 @@ def gen_card_num(start_with='622609', total_num=16):
     t = 10 - s % 10
     result += str(0 if t == 10 else t)
     return result
+
+
+def get_question_id(cookies, base_url):
+    """
+    获取密保问题编号
+    :param cookies:
+    :param base_url:
+    :return:
+    """
+    url_info = '/sobet/userInfo/userCenterAjax'
+    try:
+        r = requests.get(base_url + url_info, headers=headers, cookies=cookies)
+        qids = r.json()["result"]["userInfo"]["securityQuestion"]
+        qid = qids[:qids.rfind(',')]
+        return qid
+    except Exception as e:
+        print("请确认该账号是否已设置密保问题！！！\t", e)
+
+
+def get_answers(cookies, base_url):
+    """
+    获取密保答案
+    :param cookies:
+    :param base_url:
+    :return:
+    """
+    url_info = '/sobet/userInfo/userCenterAjax'
+    try:
+        r = requests.get(base_url + url_info, headers=headers, cookies=cookies)
+        answers = r.json()["result"]["userInfo"]["securityAnswer"]
+        answer = answers[:answers.rfind(',')]
+        return answer
+    except Exception as e:
+        print("请确认该账号是否已设置密保问题！！！\t", e)
+

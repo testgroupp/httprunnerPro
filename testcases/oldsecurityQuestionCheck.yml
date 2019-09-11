@@ -1,0 +1,26 @@
+- config:
+    name: 验证密保问题
+    base_url: $base_url
+    variables:
+      base_url: http://www.mochen111.net
+      username: m1103
+      password: abc123
+    export:
+      - msg
+
+- test:
+    name: login
+    api: api/log_in.yml
+    extract:
+      - cookies: cookies
+
+- test:
+    name: 验证密保问题
+    api: api/oldsecurityQuestionCheck.yml
+    variables:
+      question: ${get_question_id($cookies,$base_url)}
+      answer: ${get_answers($cookies,$base_url)}
+    extract:
+      msg: content.msg
+    validate:
+      - eq: [$msg,'success']

@@ -1,0 +1,15 @@
+name: 设置密保问题
+request:
+    url: /sobet/userInfo/securityQuestionAjax
+    headers:
+        User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+    method: POST
+    data:
+      cn:
+      action: commit
+      question: $question
+      answer: $answer
+
+validate:
+    - eq: ["status_code", 200]

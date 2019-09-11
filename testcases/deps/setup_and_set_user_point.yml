@@ -1,0 +1,22 @@
+- config:
+    name: 调整用户返点
+
+- test:
+    name: 登录
+    api: api/log_in.yml
+
+- test:
+    name: 下级信息
+    api: api/users.yml
+    extract:
+      userId: content.result.users.0.userId
+      point: content.result.point  # 最高返点
+
+- test:
+    name: 调整用户返点
+    api: api/set_user_point.yml
+    extract:
+      rlt: content.result
+    validate:
+      - eq: [$rlt, 'success']
+

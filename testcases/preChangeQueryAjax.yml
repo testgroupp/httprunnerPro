@@ -1,0 +1,23 @@
+- config:
+    name: 跳转到设置密保
+    base_url: $base_url
+    variables:
+      base_url: http://www.mochen111.net
+      username: m1102
+      password: abc123
+    export:
+       - msg
+
+- test:
+    name: login
+    api: api/log_in.yml
+
+- test:
+    name: 跳转到设置密保
+    api: api/preChangeQueryAjax.yml
+    variables:
+      emsg: ["你已设置过密保，如需修改请点击：",'success']
+    extract:
+      msg: content.msg
+    validate:
+      - contains: [$emsg,$msg]

@@ -1,0 +1,21 @@
+- config:
+    name: 跳转绑定邮箱
+    base_url: $base_url
+    variables:
+      base_url: http://www.mochen111.net
+      username: m1102
+      password: abc123
+
+- test:
+    name: login
+    api: api/log_in.yml
+
+- test:
+    name: 跳转绑定邮箱
+    api: api/bindEmail.yml
+    extract:
+      msg: content.msg
+      code: content.code
+    validate:
+      - eq: [$code,1]
+      - eq: [$msg,$username]

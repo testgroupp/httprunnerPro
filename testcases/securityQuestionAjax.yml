@@ -1,0 +1,21 @@
+- config:
+    name: 设置密保问题
+    base_url: $base_url
+    variables:
+      base_url: http://www.mochen111.net
+      username: m1102
+      password: abc123
+      question: 1,2,3
+      answer: china,renzhichu,9876543
+
+- test:
+    name: login
+    api: api/log_in.yml
+
+- test:
+    name: 设置密保问题
+    api: api/securityQuestionAjax.yml
+    extract:
+      msg: content.msg
+    validate:
+      - eq: [$msg,'success']

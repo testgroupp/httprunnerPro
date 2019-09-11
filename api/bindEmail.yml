@@ -1,0 +1,13 @@
+name: 跳转绑定邮箱
+request:
+    url: /sobet/userInfo/bindEmail
+    headers:
+        User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+    method: GET
+    params:
+      action: bindEmail
+      _: 1568182894305
+
+validate:
+    - eq: ["status_code", 200]

@@ -1,0 +1,13 @@
+name: 绑定邮箱
+request:
+    url: /sobet/userInfo/bindEmailAjax
+    headers:
+        User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+    method: POST
+    data:
+      action: sendEmail
+      email: $email
+
+validate:
+    - eq: ["status_code", 200]

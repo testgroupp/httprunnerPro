@@ -1,0 +1,22 @@
+- config:
+    name: 绑定邮箱
+    base_url: $base_url
+    variables:
+      base_url: http://www.mochen111.net
+      username: m1102
+      password: abc123
+      email: 123456@qq.com
+
+- test:
+    name: login
+    api: api/log_in.yml
+
+- test:
+    name: 绑定邮箱
+    api: api/bindEmailAjax.yml
+    extract:
+      msg: content.msg
+      emto: content.result.emailTo
+    validate:
+      - eq: [$msg,'success']
+      - eq: [$emto,$email]
