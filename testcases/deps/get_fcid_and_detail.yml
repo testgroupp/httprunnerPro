@@ -1,0 +1,24 @@
+- config:
+    name: 获取契约详情
+
+- test:
+    name: login
+    api: api/log_in.yml
+    extract:
+      - cookies: cookies
+
+- test:
+    name: 我的分红契约
+    api: api/recent_two_contract.yml
+    teardown_hooks:
+       - ${teardown_hook_no_contract_alert($response)}
+    extract:
+      - id: content.result.list.0.id
+
+- test:
+    name: 契约详情
+    api: api/detail_contract.yml
+    extract:
+      msg: content.msg
+    validate:
+      - eq: [$msg,'ok']

@@ -1,0 +1,13 @@
+name: 契约详情
+request:
+    url: /lottery/api/u/v1/contract/detail_contract
+    headers:
+        User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+    method: GET
+    params:
+      id: $id
+      _: 1568273054387
+
+validate:
+    - eq: ["status_code", 200]

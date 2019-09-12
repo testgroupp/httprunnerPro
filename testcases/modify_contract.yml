@@ -1,0 +1,11 @@
+- config:
+    name: 修改分红契约
+    base_url: $base_url
+    variables:
+      base_url: http://www.mochen111.net
+      username: m1102  # de925620846619
+      password: abc123
+
+- test:
+    name: 修改分红契约
+    testcase: testcases/deps/setup_and_modify_contract.yml

@@ -1,0 +1,21 @@
+- config:
+    name: 我的分红
+    base_url: $base_url
+    variables:
+      base_url: http://www.mochen111.net
+      username: de925620846619
+      password: abc123
+
+- test:
+    name: login
+    api: api/log_in.yml
+
+- test:
+    name: 我的分红
+    api: api/getBonusCycList.yml
+    extract:
+      msg: content.msg
+      code: content.code
+    validate:
+      - eq: [$msg,'查询成功']
+      - eq: [$code,0]

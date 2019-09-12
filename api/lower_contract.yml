@@ -1,0 +1,17 @@
+name: 下级契约
+request:
+    url: /lottery/api/u/v1/contract/lower_contract
+    headers:
+        User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+    method: GET
+    params:
+      createDateBegin: #2019-01-11
+      createDateEnd: #2019-09-12
+      status:
+      currPage: 1
+      pageSize: 10
+      _: 1568279669118
+
+validate:
+    - eq: ["status_code", 200]

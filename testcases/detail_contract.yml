@@ -1,0 +1,15 @@
+- config:
+    name: 契约详情
+    base_url: $base_url
+    variables:
+      base_url: http://www.mochen111.net
+      username: m1102  # de925620846619
+      password: abc123
+
+- test:
+    name: 契约详情
+    testcase: testcases/deps/get_fcid_and_detail.yml
+    extract:
+      msg: content.msg
+    validate:
+      - eq: [$msg,'ok']

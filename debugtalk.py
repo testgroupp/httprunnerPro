@@ -313,6 +313,16 @@ def teardown_hook_reset_password(response, cookies, base_url, password, newPassw
         print("密码修改失败！")
 
 
+def teardown_hook_no_contract_alert(response):
+    """
+    未签订过分红契约提示
+    :param response:
+    :return:
+    """
+    if (response.json["result"]["list"] == []) is True:
+        print("\033[31;43;1m该用户暂未签订过分红契约！！！")
+
+
 def login_admin(base_url, username):
     """
     后台登录：admin,获取登录cookies
@@ -439,7 +449,7 @@ def get_question_id(cookies, base_url):
         qid = qids[:qids.rfind(',')]
         return qid
     except Exception as e:
-        print("请确认该账号是否已设置密保问题！！！\t", e)
+        print("\033[31;43;1m请确认该账号是否已设置密保问题！！！\t", e)
 
 
 def get_answers(cookies, base_url):
@@ -456,5 +466,4 @@ def get_answers(cookies, base_url):
         answer = answers[:answers.rfind(',')]
         return answer
     except Exception as e:
-        print("请确认该账号是否已设置密保问题！！！\t", e)
-
+        print("\033[31;43;1m请确认该账号是否已设置密保问题！！！\t", e)

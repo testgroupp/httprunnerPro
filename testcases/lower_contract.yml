@@ -1,0 +1,21 @@
+- config:
+    name: 下级契约
+    base_url: $base_url
+    variables:
+      base_url: http://www.mochen111.net
+      username: de925620846619
+      password: abc123
+
+- test:
+    name: login
+    api: api/log_in.yml
+
+- test:
+    name: 下级契约
+    api: api/lower_contract.yml
+    extract:
+      msg: content.msg
+      code: content.code
+    validate:
+      - eq: [$msg,'ok']
+      - eq: [$code, 1]

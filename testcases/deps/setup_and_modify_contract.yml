@@ -1,0 +1,31 @@
+- config:
+    name: 修改分红契约
+
+- test:
+    name: login
+    api: api/log_in.yml
+
+#- test:
+#    name: 创建分红契约 # 确保有“待签订”状态的契约
+#    api: api/add_contract.yml
+#
+#- test:
+#    name: 获取下级契约
+#    api: api/lower_contract.yml
+#    teardown_hooks:
+#      - ${teardown_hook_no_contract_alert($response)}
+#    extract:
+#      id: content.result.list.0.id
+#      date: content.result.list.0.startDate
+
+#- test:
+#    name: 修改分红契约
+#    api: api/modify_contract.yml
+#    variables:
+#      edit: '{"contractId":"$id","startDate":"$date","condition":"","cycleType":"1","rules":[{"bet":20000,"loss":"2","bonus":"2.0","activePeople":"2","sort":1}]}'
+#    extract:
+#      msg: content.msg
+#      code: content.code
+#    validate:
+#      - eq: [$msg,'ok']
+#      - eq: [$code, 1]

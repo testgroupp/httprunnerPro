@@ -1,0 +1,19 @@
+name: 下级分红
+request:
+    url: /lottery/api/u/v1/bonus/getLowerBonusCycList
+    headers:
+        User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+    method: GET
+    params:
+      bonusCycTitle:
+      actionStatusDetail:
+      userName:
+      currPage: 1
+      pageSize: 10
+      sortName: bonusCycTitle
+      sortType: desc
+      _: 1568279669092
+
+validate:
+    - eq: ["status_code", 200]
