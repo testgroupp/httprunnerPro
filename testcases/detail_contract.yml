@@ -1,5 +1,5 @@
 - config:
-    name: 契约详情
+    name: 契约详情_分红
     base_url: $base_url
     variables:
       base_url: http://www.mochen111.net
@@ -7,7 +7,7 @@
       password: abc123
 
 - test:
-    name: 契约详情
+    name: 契约详情_分红
     testcase: testcases/deps/get_fcid_and_detail.yml
     extract:
       msg: content.msg

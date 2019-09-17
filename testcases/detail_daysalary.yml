@@ -1,0 +1,11 @@
+- config:
+    name: 契约详情_日工资
+    base_url: $base_url
+    variables:
+      base_url: http://www.mcpoker.net
+      username: mdzs001
+      password: abc123456
+
+- test:
+    name: 契约详情_日工资
+    testcase: testcases/deps/get_dsid_and_detail.yml

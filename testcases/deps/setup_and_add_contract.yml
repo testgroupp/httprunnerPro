@@ -1,5 +1,6 @@
 - config:
-    name: 修改分红契约
+    name: 创建分红契约
+    base_url: $base_url
 
 - test:
     name: login
@@ -30,22 +31,9 @@
     api: api/add_contract.yml
     variables:
        add: '{"useridB":"${get_usable_lower($contract_list,$users)}","startDate":"$sDate","condition":"","cycleType":"1","rules":[{"bet":80000,"loss":"40000","bonus":"1","activePeople":"20","sort":1}]}'
-
-- test:
-    name: 下级分红契约
-    api: api/lower_contract.yml
     extract:
-      - contract_id: content.result.list.0.id
-
-
-- test:
-      name: 修改契约
-      api: api/modify_contract.yml
-      variables:
-          edit: '{"contractId":$contract_id,"startDate":"$sDate","condition":"","cycleType":"1","rules":[{"bet":100000,"loss":"50000","bonus":"2","activePeople":"30","sort":1}]}'
-      extract:
-          msg: content.msg
-          rlt: content.result
-      validate:
-          - eq: [$msg,'ok']
-          - eq: [$rlt,'修改契约成功']
+       msg: content.msg
+       code: content.code
+    validate:
+       - eq: [$msg,'ok']
+       - eq: [$code, 1]

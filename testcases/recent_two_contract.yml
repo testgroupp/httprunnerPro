@@ -1,17 +1,17 @@
 - config:
-    name: 我的分红契约
+    name: 我的契约_分红
     base_url: $base_url
     variables:
       base_url: http://www.mochen111.net
-      username: m1102
-      password: abc123
+      username: de925620846619
+      password: abc158
 
 - test:
     name: login
     api: api/log_in.yml
 
 - test:
-    name: 我的分红契约
+    name: 我的契约_分红
     api: api/recent_two_contract.yml
     extract:
       msg: content.msg

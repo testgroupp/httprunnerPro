@@ -317,10 +317,17 @@ def teardown_hook_no_contract_alert(response):
     """
     未签订过分红契约提示
     :param response:
-    :return:
+    :return:x
     """
-    if (response.json["result"]["list"] == []) is True:
-        print("\033[31;43;1m该用户暂未签订过分红契约！！！")
+    list_ = response.json["result"]["list"]
+    if (list_ == []) is True:
+        print("\033[31;43;1m该用户上级暂未向其发起契约签订申请！！！")
+    else:
+        for li in list_:
+            if li["status"] == "1":
+                break
+        else:
+            print("\033[31;43;1m该用户暂无已签订的契约！！！")
 
 
 def login_admin(base_url, username):
@@ -467,3 +474,23 @@ def get_answers(cookies, base_url):
         return answer
     except Exception as e:
         print("\033[31;43;1m请确认该账号是否已设置密保问题！！！\t", e)
+
+
+def get_usable_lower(contracts, users):
+    """
+    获取可用下级代理账号：没有待签约契约
+    :param contracts: 下级契约列表
+    :param users: 下级列表
+    :return:
+    """
+    names_ = []  # 有待签订状态契约用户
+    if (contracts != []) is True:
+        for con in contracts:
+            if con["status"] == '0':
+                names_.append(con["userName"])
+    for user in users:
+        if user["userType"] == 1 and user["userName"] not in names_:
+            return user["userName"]
+    else:
+        print("\033[31;43;1m暂无可新增契约的下级,请检查！！！")
+        return "暂无可新增契约的下级，请检查！！！"

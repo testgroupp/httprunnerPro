@@ -1,0 +1,11 @@
+- config:
+    name: 更新分红契约状态_取消
+    base_url: $base_url
+    variables:
+      base_url: http://www.mochen111.net
+      username: m1103
+      password: abc123
+
+- test:
+    name: 更新分红契约状态_取消
+    testcase: testcases/deps/setup_and_update_status.yml

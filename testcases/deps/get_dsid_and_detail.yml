@@ -1,5 +1,5 @@
 - config:
-    name: 获取契约详情_分红
+    name: 获取契约详情_日工资
 
 - test:
     name: login
@@ -8,8 +8,8 @@
       - cookies: cookies
 
 - test:
-    name: 我的分红契约
-    api: api/recent_two_contract.yml
+    name: 我的契约_日工资
+    api: api/recent_two_daySalary.yml
     teardown_hooks:
        - ${teardown_hook_no_contract_alert($response)}
     extract:
@@ -17,7 +17,7 @@
 
 - test:
     name: 契约详情
-    api: api/detail_contract.yml
+    api: api/detail_daysalary.yml
     extract:
       msg: content.msg
     validate:

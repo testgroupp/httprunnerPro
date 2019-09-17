@@ -1,18 +1,18 @@
 - config:
-    name: 下级契约
+    name: 我的契约_日工资
     base_url: $base_url
     variables:
-      base_url: http://www.mochen111.net
-      username: de843715166652
-      password: abc123
+      base_url: http://www.mcpoker.net
+      username: mdzs001
+      password: abc123456
 
 - test:
     name: login
     api: api/log_in.yml
 
 - test:
-    name: 下级契约
-    api: api/lower_contract.yml
+    name: 我的契约_日工资
+    api: api/recent_two_daySalary.yml
     extract:
       msg: content.msg
       code: content.code

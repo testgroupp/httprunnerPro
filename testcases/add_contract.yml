@@ -1,0 +1,12 @@
+- config:
+    name: 创建分红契约
+    base_url: $base_url
+    variables:
+      base_url: http://www.mochen111.net
+      username: m1102  # de843715166652
+      password: abc123
+
+
+- test:
+    name: 创建分红契约
+    testcase: testcases/deps/setup_and_add_contract.yml

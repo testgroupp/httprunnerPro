@@ -1,5 +1,5 @@
 - config:
-    name: 修改分红契约
+    name: 更新分红契约状态_取消
 
 - test:
     name: login
@@ -35,17 +35,17 @@
     name: 下级分红契约
     api: api/lower_contract.yml
     extract:
-      - contract_id: content.result.list.0.id
+      - contractId: content.result.list.0.id
 
 
 - test:
-      name: 修改契约
-      api: api/modify_contract.yml
-      variables:
-          edit: '{"contractId":$contract_id,"startDate":"$sDate","condition":"","cycleType":"1","rules":[{"bet":100000,"loss":"50000","bonus":"2","activePeople":"30","sort":1}]}'
-      extract:
-          msg: content.msg
-          rlt: content.result
-      validate:
-          - eq: [$msg,'ok']
-          - eq: [$rlt,'修改契约成功']
+    name: 更新分红契约状态_取消
+    api: api/update_status.yml
+    extract:
+      msg: content.msg
+      code: content.code
+      rlt: content.result
+    validate:
+      - eq: [$msg,'ok']
+      - eq: [$code, 1]
+      - eq: [$rlt,'成功']
