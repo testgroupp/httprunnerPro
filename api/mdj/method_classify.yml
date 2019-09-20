@@ -7,7 +7,7 @@ request:
     method: GET
     params:
       _: 1568971524301
-      lottery: $lottery
+      lottery: $lotteryCode
 
 validate:
     - eq: ["status_code", 200]
