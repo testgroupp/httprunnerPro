@@ -1,0 +1,19 @@
+- config:
+    name: 获取模块子目录
+    base_url: $base_url
+    variables:
+      base_url: http://admin.mcpoker.net
+      username: delf01
+      pid: 101 # 101:会员管理
+
+- test:
+    name: 后台登录
+    api: api/admin/login.yml
+
+- test:
+    name: 获取模块子目录
+    api: api/admin/getChildrenMenus.yml
+    extract:
+      code: content.0.pid
+    validate:
+      - eq: [$code, $pid]

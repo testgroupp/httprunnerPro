@@ -1,0 +1,43 @@
+- config:
+    name: 创建契约_日工资
+    base_url: $base_url
+    variables:
+      base_url: http://www.mcpoker.net
+      username: mdzs001
+      password: abc123456
+
+- test:
+    name: login
+    api: api/log_in.yml
+
+- test:
+    name: 我的日工资契约
+    api: api/recent_two_daySalary.yml
+    teardown_hooks:
+      - ${teardown_hook_no_contract_alert($response)}
+    extract:
+      bonus: content.result.list.0.contractRuleList.0.bonus
+
+- test:
+    name: 下级信息
+    api: api/users.yml
+    extract:
+      - users: content.result.users
+
+- test:
+    name: 下级日工资契约
+    api: api/lower_daySalary.yml
+    extract:
+      - contract_list: content.result.list
+
+- test:
+    name: 创建契约_日工资
+    api: api/add_daysalary.yml
+    variables:
+      add: '{"useridB":"${get_usable_lower($contract_list,$users)}","condition":"","rules":[{"bet":"88888","activePeople":"8","lossMoney":"","bonus":"$bonus","sort":1}],"ruleType":"2"}'
+    extract:
+      msg: content.msg
+      code: content.code
+    validate:
+      - eq: [$msg,'ok']
+      - eq: [$code, 1]

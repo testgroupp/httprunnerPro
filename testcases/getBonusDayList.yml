@@ -1,0 +1,21 @@
+- config:
+    name: 我的日工资
+    base_url: $base_url
+    variables:
+      base_url: http://www.mcpoker.net
+      username: d31904
+      password: abc123
+
+- test:
+    name: login
+    api: api/log_in.yml
+
+- test:
+    name: 我的日工资
+    api: api/getBonusDayList.yml
+    extract:
+      msg: content.msg
+      code: content.code
+    validate:
+      - eq: [$msg,'查询成功']
+      - eq: [$code, 0]

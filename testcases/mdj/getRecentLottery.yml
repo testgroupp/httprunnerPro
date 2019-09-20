@@ -1,12 +1,10 @@
 - config:
-    name: getRecentLottery
-    base_url: http://www.mojie188.com
+    name: 近期玩过的采种
+    base_url: $base_url
     variables:
+      base_url: http://www.mojie188.com
       username: ceshizhi01
       password: abc123456
-    export:
-      - content
-      - msg
 
 
 - test:
@@ -14,8 +12,8 @@
     api: api/log_in.yml
 
 - test:
-    name: getRecentLottery
-    api: api/getRecentLottery.yml
+    name: 近期玩过的采种
+    api: api/mdj/getRecentLottery.yml
     extract:
       content: content
       msg: content.msg

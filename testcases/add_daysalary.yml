@@ -1,0 +1,11 @@
+- config:
+    name: 创建契约_日工资
+    base_url: $base_url
+    variables:
+      base_url: http://www.mcpoker.net
+      username: mdzhi001
+      password: abc123456
+
+- test:
+    name: 创建契约_日工资
+    testcase: testcases/deps/setup_and_add_daysalary.yml

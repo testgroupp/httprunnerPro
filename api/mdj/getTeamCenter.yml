@@ -1,0 +1,12 @@
+name: 代理中心  # md,mj
+request:
+    url: /lottery/v2/api/u/proxy/getTeamCenter
+    headers:
+        User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+            (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36
+    method: GET
+    params:
+      _: 1568710448177
+
+validate:
+    - eq: ["status_code", 200]

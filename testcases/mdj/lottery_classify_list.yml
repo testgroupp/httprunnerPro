@@ -1,0 +1,22 @@
+- config:
+    name: 采种列表
+    base_url: $base_url
+    variables:
+      base_url: http://www.mojie556.vip
+      username: zhisu004
+      password: abc123
+
+
+- test:
+    name: 登录
+    api: api/log_in.yml
+
+- test:
+    name: 采种列表
+    api: api/mdj/lottery_classify_list.yml
+    extract:
+      code: content.code
+      msg: content.msg
+    validate:
+      - eq: [$code, 1]
+      - eq: [$msg,'ok']
