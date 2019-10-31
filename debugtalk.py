@@ -494,3 +494,6 @@ def get_usable_lower(contracts, users):
     else:
         print("\033[31;43;1m暂无可新增契约的下级,请检查！！！")
         return "暂无可新增契约的下级，请检查！！！"
+
+
+print(gen_card_num())

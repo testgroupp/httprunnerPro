@@ -15,7 +15,7 @@ class MyThread(threading.Thread):
 
 
 if __name__ == '__main__':
-    suites = ["testsuites/smoke_mc.yml", "testsuites/smoke_md.yml", "testsuites/smoke_mj.yml"]
+    suites = ["testsuites/md1.yml", "testsuites/md2.yml"]
 
     # threads = []
     for suite in suites:
