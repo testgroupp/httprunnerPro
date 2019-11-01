@@ -21,7 +21,7 @@
     skipIf: ${skip_case(smoke, withdraw)}
     api: api/withdraw.yml
     extract:
-      result_w: '"msg":(.*?),"code' # content.msg
+      result_w: content.msg
     validate:
       - eq: [content.code,'0']
       - contains: [$result_w, "提现申请订单成功"]

@@ -3,7 +3,7 @@
     base_url: $base_url
     variables:
       base_url: http://www.mochen111.net
-      recharge_amount: 20
+      recharge_amount: 500
       username: m1102
       password: abc123
 
