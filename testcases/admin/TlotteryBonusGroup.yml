@@ -1,0 +1,24 @@
+- config:
+    name: 新增奖金组
+    base_url: $base_url
+    variables:
+      base_url: http://admin.mcpoker.net
+      username: hiroo
+    export:
+      - suce
+
+- test:
+    name: 新增奖金组
+    api: api/admin/TlotteryBonusGroup.yml
+    variables:
+      lotteryId: 1
+      cnname: 重庆时时彩
+      name: test
+      totalProfit: 0.05
+      totalPoint: 0.043
+      headers: ${login_admin($base_url,$username)}
+      expect_result: success
+    extract:
+      suce: content.msg
+    validate:
+      - contained_by: [$suce,$expect_result]

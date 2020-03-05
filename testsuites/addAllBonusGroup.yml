@@ -1,0 +1,14 @@
+config:
+  name: 批量新增所有彩种奖金组
+  variables:
+    data: ${P(data/TlotteryBonusGroup.csv)}
+
+testcases:
+
+
+   新增奖金组 $platform $cnname:
+       testcase: testcases/admin/TlotteryBonusGroup.yml
+       parameters:
+          platform-base_url-lotteryId-cnname-name-totalProfit-totalPoint: $data
+
+

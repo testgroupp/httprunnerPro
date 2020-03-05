@@ -1,0 +1,15 @@
+name: 新增奖金组
+request:
+  url: /lottery-admin/pages/TlotteryBonusGroup/save.do?s=0
+  headers: $headers
+  method: POST
+  data:
+    lotteryId: $lotteryId
+    cnname: $cnname
+    name: $cnname-$name
+    totalProfit: $totalProfit
+    totalPoint: $totalPoint
+    type: 0
+
+validate:
+  - eq: [status_code,200]
